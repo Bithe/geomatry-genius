@@ -20,12 +20,12 @@
 
 
     <main>
-        <div class="flex flex-col md:flex-row">
+        <div class="flex flex-col md:flex-row gap-8">
             <!--shapes  -->
-            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-32">
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
 
                 <!-- triangle -->
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card bg-base-100 shadow-xl">
                     <figure><img src="images/triangle.png" alt="Shoes" />
                     </figure>
                     <div class="card-body">
@@ -50,20 +50,26 @@
                 <!--  -->
 
                 <!-- Rectangle -->
-                <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                            alt="Shoes" />
+                <div class="card bg-base-100 shadow-xl">
+                    <figure><img src="images/rectangle.png" alt="Shoes" />
                     </figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Rectangle!</h2>
-                        <p>Area (A) = w X l</p>
+                    <div class="card-body ">
+                        <h2 class="card-title ">Rectangle!</h2>
+                        <p class="text-center">Area (A) = w X l</p>
 
                         <div class="flex items-center">
-                            <input type="text" placeholder="w" class="w-24 text-2xl p-2 rounded-sm">
+                            <input id="w" type="text" placeholder="w" class="w-24 text-2xl p-2 rounded-sm">
                             <span class="mr-4 ml-2">cm</span>
 
-                            <input type="text" placeholder="l" class="w-24 text-2xl p-2 rounded-sm">
-                            <span>cm</span>
+                            <input id="l" type="text" placeholder="l" class="w-24 text-2xl p-2 rounded-sm">
+                            <span>cm</span><br>
+
+
+                        </div>
+
+                        <div>
+                            <p>Area: <span id="rectangle-area"></span> <span>cm<sup>2</sup></span></p>
+
                         </div>
 
                         <div class="card-actions justify-end">
@@ -72,20 +78,87 @@
                     </div>
                 </div>
                 <!--  -->
+
+
+                <!-- Parallelogram -->
+                <div class="card bg-base-100 shadow-xl">
+                    <figure><img src="images/rectangle.png" alt="Shoes" />
+                    </figure>
+                    <div class="card-body ">
+                        <h2 class="card-title ">Rectangle!</h2>
+                        <p class="text-center">Area (A) = w X l</p>
+
+                        <div class="flex items-center">
+                            <input id="w" type="text" placeholder="w" class="w-24 text-2xl p-2 rounded-sm">
+                            <span class="mr-4 ml-2">cm</span>
+
+                            <input id="l" type="text" placeholder="l" class="w-24 text-2xl p-2 rounded-sm">
+                            <span>cm</span><br>
+
+
+                        </div>
+
+                        <div>
+                            <p>Area: <span id="rectangle-area"></span> <span>cm<sup>2</sup></span></p>
+
+                        </div>
+
+                        <div class="card-actions justify-end">
+                            <button onclick="rectangleCal()" class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+
+                   <!-- Pentagon -->
+                   <div class="card bg-base-100 shadow-xl">
+                    <figure><img src="images/pentagon.png" alt="Shoes" />
+                    </figure>
+                    <div class="card-body ">
+                        <h2 class="card-title ">Pentagon!</h2>
+                        <p class="text-center">Area (A) = 0.5 X p X b</p>
+
+                        <div class="flex items-center">
+                            <input id="pentagon-perimeter" type="text" placeholder="p" class="w-24 text-2xl p-2 rounded-sm">
+                            <span class="mr-4 ml-2">cm</span>
+
+                            <input id="pentagon-apothem" type="text" placeholder="b" class="w-24 text-2xl p-2 rounded-sm">
+                            <span>cm</span><br>
+
+
+                        </div>
+
+                        <div>
+                            <p>Area: <span id="pentagon-area"></span> <span>cm<sup>2</sup></span></p>
+
+                        </div>
+
+                        <div class="card-actions justify-end">
+                            <button onclick="rectangleCal()" class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+
+
+
+
             </div>
             <!--  -->
 
 
             <!-- calculation -->
-            <div class="w-96 border-2 border-gray-700 rounded-md">
-                <h3 class="text-3xl">Area Calculation</h3>
+            <div class="w-96 border-2 border-gray-700">
+                <h3>Area Calulation</h3>
+
             </div>
+
         </div>
     </main>
 
 
     <script src="js/triangle-cal.js"></script>
-    <script src="js/rectangle.js"></script>
+    <script src="js/rectangle-cal.js"></script>
 </body>
 
 </html>
